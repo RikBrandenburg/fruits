@@ -78,7 +78,7 @@ class FruitController extends Controller
 
         $fruit->update($validatedData);
 
-        return redirect()->route('fruit.index')->with('success', 'Fruit created successfully.');
+        return redirect()->route('fruit.index')->with('success', 'Fruit updated successfully.');
     }
 
     /**
