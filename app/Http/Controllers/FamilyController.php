@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Family;
+use App\Models\Fruit;
 use Illuminate\Http\Request;
 
 class FamilyController extends Controller
@@ -50,10 +51,12 @@ class FamilyController extends Controller
      */
     public function show(Family $family)
     {
-        $family = Family::find($family->id);
-
+        $family->load('fruits');
+    
+        // Pass the family and its associated fruits to the view
         return view('families.show', compact('family'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
