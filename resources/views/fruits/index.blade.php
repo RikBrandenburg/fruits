@@ -37,7 +37,7 @@
 
                             <div class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-x-2 sm:space-y-0">
                                 <a href="{{ route('fruit.edit', $fruit->id) }}">
-                                    <x-primary-button>Edit</x-primary-button>
+                                    <x-secondary-button>Edit</x-secondary-button>
                                 </a>
                                 <!-- Delete Button -->
                                 <form method="POST" action="{{ route('fruit.destroy', $fruit->id) }}"

@@ -36,7 +36,7 @@
 
                             <div class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-x-2 sm:space-y-0">
                                 <a href="{{ route('family.edit', $family->id) }}">
-                                    <x-primary-button>Edit</x-primary-button>
+                                    <x-secondary-button>Edit</x-secondary-button>
                                 </a>
                                 <!-- Delete Button -->
                                 <form method="POST" action="{{ route('family.destroy', $family->id) }}"
