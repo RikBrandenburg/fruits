@@ -16,7 +16,7 @@
                         @if ($fruit->family)
                             <p class="text-xl font-bold">Family: {{ $fruit->family->name }}</p>
                         @else
-                        <p class="text-xl font-bold text-red-500">Geen familiy gespecificeerd op deze fruit.</p>
+                        <p class="text-xl font-bold text-red-500">No family associated on this fruit.</p>
                         @endif
                     </div>
                 </div>
