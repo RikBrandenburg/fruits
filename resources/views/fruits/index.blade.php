@@ -33,8 +33,6 @@
                                         {{ $fruit->name }}
                                     </a>
                                 </h2>
-                                <p class="text-sm">Colour: {{ $fruit->colour }}</p>
-                                <p class="text-sm">Weight: {{ $fruit->weight }}</p>
                             </div>
 
                             <div class="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-x-2 sm:space-y-0">
