@@ -59,8 +59,9 @@ class FruitController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Fruit $fruit)
-    {
-        return view('fruits.edit', compact('fruit'));
+    {   
+        $families = Family::all();
+        return view('fruits.edit', compact('fruit', 'families'));
     }
 
     /**
@@ -72,6 +73,7 @@ class FruitController extends Controller
             'name' => 'required|string|max:255',
             'colour' => 'required|string|max:255',
             'weight' => 'required|numeric',
+            'family_id' => 'required|integer|exists:family,id',
         ]);
 
         $fruit->update($validatedData);

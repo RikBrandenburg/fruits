@@ -6,18 +6,18 @@
     </x-slot>
 
     @if (session('success'))
-    <div class="py-4">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @if (session('success'))
-                <div class="bg-green-500 text-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6">
-                        {{ session('success') }}
+        <div class="py-4">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                @if (session('success'))
+                    <div class="bg-green-500 text-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6">
+                            {{ session('success') }}
+                        </div>
                     </div>
-                </div>
-            @endif
+                @endif
+            </div>
         </div>
-    </div>
-    
+
     @endif
 
     <div class="py-12">
@@ -38,8 +38,9 @@
                             <p class="text-sm">Weight: {{ $fruit->weight }}</p>
 
                             <div>
-                                <a
-                                    href="{{ route('fruit.edit', $fruit->id) }}"><x-primary-button>Edit</x-primary-button></a>
+                                <a href="{{ route('fruit.edit', $fruit->id) }}">
+                                    <x-primary-button>Edit {{ $fruit->id }}</x-primary-button>
+                                </a>
                                 <!-- Delete Button -->
                                 <form method="POST" action="{{ route('fruit.destroy', $fruit->id) }}"
                                     onsubmit="return confirm('Are you sure you want to delete this fruit?');">
